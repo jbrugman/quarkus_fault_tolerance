@@ -6,8 +6,6 @@ import javax.enterprise.context.ApplicationScoped
 class CanFailService {
 
     // e.g. connect to sftp and write something.
-    fun unstable( i : Int) : Int {
-        return i
-    }
+    fun unstable(i : Int) : Int = i
 
 }

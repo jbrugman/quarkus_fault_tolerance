@@ -14,12 +14,9 @@ class ExecuteService {
 
     @Retry(maxRetries = 4)
     @Fallback(fallbackMethod = "stable")
-    fun executeMe(i : Int) : Int{
-        return canFailService.unstable( i )
-    }
+    fun executeMe(i : Int) : Int = canFailService.unstable(i)
 
-    private fun stable( i: Int ) : Int {
-        return 10
-    }
+    private fun stable(i: Int) : Int = 10
+
 
 }
