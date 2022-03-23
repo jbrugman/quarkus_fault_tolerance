@@ -19,7 +19,7 @@ class ExecuteServiceTest {
     @Test
     fun testUnhappyRetry() {
         Mockito.doThrow(NullPointerException()).`when`(canFailService)?.unstable(1)
-        var fallbackValue = executeService.executeMe(1)
+        val fallbackValue = executeService.executeMe(1)
 
         // Expecting to retry, so the unstable function should have been called 5 times:
         Mockito.verify(canFailService, Mockito.times(5)).unstable(1)
@@ -31,7 +31,7 @@ class ExecuteServiceTest {
     @Test
     fun testHappyNoRetry() {
         Mockito.`when`(canFailService.unstable(2)).thenReturn(2)
-        var happyValue = executeService.executeMe(2)
+        val happyValue = executeService.executeMe(2)
 
         // Expecting no retry needed, so the unstable function should have been called 1 times:
         Mockito.verify(canFailService, Mockito.times(1)).unstable(2)
