@@ -1,5 +1,7 @@
 # helloWorld Project
 
+This is the example belonging to the blog-post: https://blog.jdriven.com/2022/03/fault-tolerance-quarkus/
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
