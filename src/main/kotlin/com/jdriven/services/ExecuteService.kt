@@ -18,5 +18,4 @@ class ExecuteService {
 
     private fun stable(i: Int) : Int = 10
 
-
 }
