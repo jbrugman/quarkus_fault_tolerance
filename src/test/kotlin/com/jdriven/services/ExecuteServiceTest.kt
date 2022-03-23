@@ -17,7 +17,7 @@ class ExecuteServiceTest {
     lateinit var  executeService: ExecuteService
 
     @Test
-    fun testUnhappyRetry(){
+    fun testUnhappyRetry() {
         Mockito.doThrow(NullPointerException()).`when`(canFailService)?.unstable(1)
         var fallbackValue = executeService.executeMe(1)
 
@@ -29,7 +29,7 @@ class ExecuteServiceTest {
     }
 
     @Test
-    fun testHappyNoRetry(){
+    fun testHappyNoRetry() {
         Mockito.`when`(canFailService.unstable(2)).thenReturn(2)
         var happyValue = executeService.executeMe(2)
 
